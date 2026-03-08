@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,19 +12,26 @@
 
 <style>
 
-/* RESUME PAGE */
+/* PAGE */
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#0c0c0c;
+color:white;
+}
+
+/* RESUME LAYOUT */
 
 .resume-page{
 display:grid;
 grid-template-columns:40% 60%;
 gap:60px;
 padding:120px 10%;
-background:#0c0c0c;
-color:white;
 min-height:100vh;
 }
 
-/* LEFT TITLE */
+/* LEFT SIDE TITLE */
 
 .resume-title{
 font-size:70px;
@@ -37,7 +45,7 @@ line-height:1.1;
 width:100%;
 }
 
-/* SECTION BLOCK */
+/* EACH SECTION */
 
 .resume-item{
 border-bottom:1px solid #333;
@@ -59,19 +67,33 @@ max-height:0;
 overflow:hidden;
 transition:0.4s;
 opacity:0.9;
+max-width:600px;
 }
 
+/* OPEN SECTION */
+
 .resume-item.active .resume-content{
-max-height:800px;
+max-height:900px;
 margin-top:20px;
 }
 
 /* TEXT */
 
 .resume-content p{
-margin-bottom:20px;
+margin-bottom:10px;
 line-height:1.6;
 font-size:16px;
+}
+
+/* BULLETS */
+
+.resume-content ul{
+margin:10px 0 25px 20px;
+}
+
+.resume-content li{
+margin-bottom:6px;
+line-height:1.5;
 }
 
 /* ARROW */
@@ -89,7 +111,7 @@ color:#3fa9f5;
 
 .skill-title{
 font-weight:600;
-margin-top:15px;
+margin-top:20px;
 }
 
 </style>
@@ -104,9 +126,7 @@ margin-top:15px;
 <!-- LEFT SIDE -->
 
 <div class="resume-title">
-
 My<br>Resume
-
 </div>
 
 
@@ -127,27 +147,21 @@ Education
 <div class="resume-content">
 
 <p>
-
 <strong>KIET Group of Institutions — Class of 2027</strong><br>
 Bachelor of Technology in Artificial Intelligence & Data Science (JNTUK)<br>
 Cumulative CGPA: <strong>8.6 (78%)</strong>
-
 </p>
 
 <p>
-
 <strong>Aditya Educational Institutions — Class of 2023</strong><br>
 Intermediate in Mathematics, Physics & Chemistry (AP State Board)<br>
 Cumulative Percentage: <strong>94.5%</strong>
-
 </p>
 
 <p>
-
 <strong>Akshara School — Class of 2021</strong><br>
 Matriculation (CBSE)<br>
 Cumulative Percentage: <strong>90%</strong>
-
 </p>
 
 </div>
@@ -168,43 +182,49 @@ Leadership & Extracurriculars
 <div class="resume-content">
 
 <p>
-
 <strong>KW's Silver Tongue Toastmasters Club</strong><br>
-Club President & Master of Ceremonies<br><br>
-
-Leading club operations, mentoring members, and actively hosting programs to drive engaging and impactful events.
-
+Club President & Master of Ceremonies
 </p>
+
+<ul>
+<li>Leading club operations and mentoring members</li>
+<li>Hosting engaging and impactful club meetings</li>
+<li>Encouraging members to develop confidence and communication skills</li>
+</ul>
 
 
 <p>
-
 <strong>KIET Group of Institutions</strong><br>
-Single Point of Contact (SPOC), Team Leader & Volunteer<br><br>
-
-Coordinated college programs, volunteered for campus initiatives, and led teams to successfully organize events.
-
+Single Point of Contact (SPOC), Team Leader & Volunteer
 </p>
+
+<ul>
+<li>Coordinated various college programs and activities</li>
+<li>Volunteered in organizing campus initiatives</li>
+<li>Led teams to execute events successfully</li>
+</ul>
 
 
 <p>
-
 <strong>Aravindh Vinayak Vidhyalayam</strong><br>
-Student Coordinator<br><br>
-
-Assisted in organizing student activities and facilitated communication between students and administration.
-
+Student Coordinator
 </p>
+
+<ul>
+<li>Organized student activities and academic programs</li>
+<li>Bridged communication between students and administration</li>
+</ul>
 
 
 <p>
-
 <strong>Akshara School</strong><br>
-Class Leader & School Captain<br><br>
-
-Developed leadership, communication, and teamwork skills while representing students.
-
+Class Leader & School Captain
 </p>
+
+<ul>
+<li>Represented students in academic and co-curricular activities</li>
+<li>Developed leadership, teamwork, and communication skills</li>
+</ul>
 
 </div>
 
@@ -224,33 +244,40 @@ Skills
 <div class="resume-content">
 
 <p class="skill-title">Communication & Leadership</p>
-<p>
-Public Speaking<br>
-Team Management<br>
-Leadership<br>
-Communication
-</p>
+
+<ul>
+<li>Public Speaking</li>
+<li>Team Management</li>
+<li>Leadership</li>
+<li>Communication</li>
+</ul>
+
 
 <p class="skill-title">Design & Outreach</p>
-<p>
-Canva<br>
-Poster Designing<br>
-Social Media Management
-</p>
+
+<ul>
+<li>Canva</li>
+<li>Poster Designing</li>
+<li>Social Media Management</li>
+</ul>
+
 
 <p class="skill-title">Programming & Development</p>
-<p>
-HTML<br>
-CSS<br>
-Python
-</p>
+
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>Python</li>
+</ul>
+
 
 <p class="skill-title">Productivity & Software</p>
-<p>
-Microsoft Word<br>
-Microsoft Excel<br>
-Microsoft PowerPoint
-</p>
+
+<ul>
+<li>Microsoft Word</li>
+<li>Microsoft Excel</li>
+<li>Microsoft PowerPoint</li>
+</ul>
 
 </div>
 
@@ -269,11 +296,11 @@ Certifications
 
 <div class="resume-content">
 
-<p>
-
-Certifications will be added soon.
-
-</p>
+<ul>
+<li>Certification details will be added soon</li>
+<li>Certification details will be added soon</li>
+<li>Certification details will be added soon</li>
+</ul>
 
 </div>
 
@@ -291,11 +318,11 @@ Certifications will be added soon.
 
 /* ACCORDION */
 
-const items=document.querySelectorAll(".resume-item");
+const items = document.querySelectorAll(".resume-item");
 
-items.forEach(item=>{
+items.forEach(item => {
 
-item.addEventListener("click",()=>{
+item.addEventListener("click", () => {
 
 item.classList.toggle("active");
 
@@ -304,7 +331,6 @@ item.classList.toggle("active");
 });
 
 </script>
-
 
 </body>
 
