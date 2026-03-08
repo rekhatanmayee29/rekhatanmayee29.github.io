@@ -12,367 +12,253 @@
 
 <style>
 
-/* Resume page background */
-
 .resume-page{
-
-background:linear-gradient(135deg,#1e88e5,#0d47a1);
-
-min-height:100vh;
-
-padding-top:120px;
-
+background:linear-gradient(135deg,#0e2f4f,#0a1c2e);
 color:white;
-
-font-family:Arial, Helvetica, sans-serif;
-
+min-height:100vh;
+padding-top:120px;
+padding-bottom:80px;
 }
-
-
-
-/* resume container */
 
 .resume-container{
-
-width:80%;
-
+width:90%;
+max-width:1100px;
 margin:auto;
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:60px;
-
 }
-
-
-
-/* title */
 
 .resume-title{
-
-font-size:60px;
-
-font-weight:700;
-
+font-size:56px;
+margin-bottom:60px;
 }
 
-
-
-/* accordion section */
+/* SECTION */
 
 .resume-section{
-
-border-bottom:1px solid rgba(255,255,255,0.4);
-
-padding:20px 0;
-
-cursor:pointer;
-
+margin-bottom:60px;
 }
-
-
 
 .resume-section h2{
-
-font-size:36px;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-}
-
-
-
-.resume-content{
-
-margin-top:20px;
-
-display:none;
-
-}
-
-
-
-.resume-content p{
-
+font-size:32px;
 margin-bottom:20px;
+border-bottom:2px solid rgba(255,255,255,0.2);
+padding-bottom:10px;
+}
 
+/* CARD */
+
+.resume-card{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:10px;
+margin-bottom:20px;
+transition:0.3s;
+}
+
+.resume-card:hover{
+background:rgba(255,255,255,0.08);
+transform:translateY(-4px);
+}
+
+/* TITLE */
+
+.resume-card h3{
+margin-bottom:6px;
+font-size:20px;
+}
+
+.resume-card h4{
+font-weight:normal;
+opacity:0.8;
+margin-bottom:10px;
+}
+
+.resume-card p{
+opacity:0.85;
 line-height:1.6;
-
 }
 
+/* SKILLS GRID */
 
-
-/* bullets */
-
-.resume-content ul{
-
-padding-left:20px;
-
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
 
-
-
-.resume-content li{
-
-margin-bottom:15px;
-
-line-height:1.6;
-
+.skill-box{
+background:rgba(255,255,255,0.05);
+padding:20px;
+border-radius:10px;
 }
 
+.skill-box h4{
+margin-bottom:10px;
+}
 
+.skill-box ul{
+padding-left:18px;
+line-height:1.8;
+}
 
 </style>
 
 </head>
 
-
-
 <body>
-
-
-
-<!-- NAVBAR -->
 
 <header class="navbar">
 
 <div class="logo">ART</div>
 
 <nav>
-
 <a href="index.html">Home</a>
-<a href="#">Interests</a>
+<a href="interests.html">Interests</a>
 <a href="resume.html">Resume</a>
 <a href="connect.html">Connect</a>
-
 </nav>
 
 </header>
 
 
-
-
-<!-- RESUME SECTION -->
-
 <section class="resume-page">
 
 <div class="resume-container">
 
-
-
-<!-- LEFT SIDE -->
-
-<div>
-
 <h1 class="resume-title">My Resume</h1>
-
-</div>
-
-
-
-
-<!-- RIGHT SIDE -->
-
-<div>
-
 
 
 <!-- EDUCATION -->
 
-<div class="resume-section" onclick="toggleSection('education')">
+<div class="resume-section">
 
-<h2>Education ⌄</h2>
+<h2>Education</h2>
 
-<div id="education" class="resume-content">
+<div class="resume-card">
+<h3>KIET Group of Institutions</h3>
+<h4>B.Tech Artificial Intelligence & Data Science — Class of 2027</h4>
+<p>Affiliated to JNTUK</p>
+<p><strong>CGPA:</strong> 8.6 (78%)</p>
+</div>
 
-<ul>
+<div class="resume-card">
+<h3>Aditya Educational Institutions</h3>
+<h4>Intermediate MPC — Class of 2023</h4>
+<p>AP State Board</p>
+<p><strong>Percentage:</strong> 94.5%</p>
+</div>
 
-<li>
-
-<strong>KIET Group of Institutions — Class of 2027</strong><br>
-
-Bachelor of Technology in Artificial Intelligence & Data Science (JNTUK)<br>
-
-Cumulative CGPA: 8.6 (78%)
-
-</li>
-
-
-<li>
-
-<strong>Aditya Educational Institutions — Class of 2023</strong><br>
-
-Intermediate in Math, Physics, and Chemistry (AP State Board)<br>
-
-Cumulative Percentage: 94.5%
-
-</li>
-
-
-<li>
-
-<strong>Akshara School — Class of 2021</strong><br>
-
-Matriculation (CBSE)<br>
-
-Cumulative Percentage: 90%
-
-</li>
-
-</ul>
-
+<div class="resume-card">
+<h3>Akshara School</h3>
+<h4>Matriculation — Class of 2021</h4>
+<p>CBSE</p>
+<p><strong>Percentage:</strong> 90%</p>
 </div>
 
 </div>
-
-
 
 
 <!-- LEADERSHIP -->
 
-<div class="resume-section" onclick="toggleSection('leadership')">
+<div class="resume-section">
 
-<h2>Leadership & Extracurriculars ⌄</h2>
+<h2>Leadership & Extracurriculars</h2>
 
-<div id="leadership" class="resume-content">
+<div class="resume-card">
+<h3>KW's Silver Tongue Toastmasters Club</h3>
+<h4>Club President & Master of Ceremonies</h4>
+<p>
+Leading club operations, mentoring members and hosting impactful programs that build communication and leadership.
+</p>
+</div>
 
-<ul>
+<div class="resume-card">
+<h3>KIET Group of Institutions</h3>
+<h4>Single Point of Contact (SPOC) • Team Leader • Volunteer</h4>
+<p>
+Coordinated multiple college programs and led teams to successfully organize campus events.
+</p>
+</div>
 
-<li>
+<div class="resume-card">
+<h3>Aravindh Vinayak Vidhyalayam</h3>
+<h4>Student Coordinator</h4>
+<p>
+Organized student activities and facilitated communication between students and administration.
+</p>
+</div>
 
-<strong>KW's Silver Tongue Toastmasters Club</strong><br>
-
-Club President & Master of Ceremonies<br>
-
-Leading club operations, mentoring members, and actively hosting programs to drive engaging and impactful events.
-
-</li>
-
-
-
-<li>
-
-<strong>KIET Group of Institutions</strong><br>
-
-Single Point of Contact (SPOC), Team Leader & Volunteer<br>
-
-Coordinated college programs, volunteered for campus initiatives, and led teams to successfully organize events.
-
-</li>
-
-
-
-<li>
-
-<strong>Aravindh Vinayak Vidhyalayam</strong><br>
-
-Student Coordinator<br>
-
-Assisted in organizing student activities and facilitated communication between students and administration.
-
-</li>
-
-
-
-<li>
-
-<strong>Akshara School</strong><br>
-
-Class Leader & School Captain<br>
-
-Developed foundational leadership, communication, and teamwork skills during early academic years.
-
-</li>
-
-</ul>
-
+<div class="resume-card">
+<h3>Akshara School</h3>
+<h4>Class Leader & School Captain</h4>
+<p>
+Developed early leadership, communication, and teamwork skills.
+</p>
 </div>
 
 </div>
-
-
 
 
 <!-- SKILLS -->
 
-<div class="resume-section" onclick="toggleSection('skills')">
+<div class="resume-section">
 
-<h2>Skills ⌄</h2>
+<h2>Skills</h2>
 
-<div id="skills" class="resume-content">
+<div class="skills-grid">
 
+<div class="skill-box">
+<h4>Communication & Leadership</h4>
 <ul>
-
-<li>
-
-<strong>Communication & Leadership</strong><br>
-
-Public Speaking, Team Management, Leadership, Communication
-
-</li>
-
-
-<li>
-
-<strong>Design & Outreach</strong><br>
-
-Canva, Poster Designing, Social Media Management
-
-</li>
-
-
-<li>
-
-<strong>Programming & Development</strong><br>
-
-HTML, CSS, Python
-
-</li>
-
-
-<li>
-
-<strong>Productivity & Software</strong><br>
-
-Microsoft Word, Excel, PowerPoint
-
-</li>
-
+<li>Public Speaking</li>
+<li>Team Management</li>
+<li>Leadership</li>
+<li>Communication</li>
 </ul>
+</div>
 
+<div class="skill-box">
+<h4>Design & Outreach</h4>
+<ul>
+<li>Canva</li>
+<li>Poster Designing</li>
+<li>Social Media Management</li>
+</ul>
+</div>
+
+<div class="skill-box">
+<h4>Programming</h4>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>Python</li>
+</ul>
+</div>
+
+<div class="skill-box">
+<h4>Productivity Tools</h4>
+<ul>
+<li>Microsoft Word</li>
+<li>Excel</li>
+<li>PowerPoint</li>
+</ul>
 </div>
 
 </div>
 
-
+</div>
 
 
 <!-- CERTIFICATIONS -->
 
-<div class="resume-section" onclick="toggleSection('certifications')">
+<div class="resume-section">
 
-<h2>Certifications ⌄</h2>
+<h2>Certifications</h2>
 
-<div id="certifications" class="resume-content">
-
+<div class="resume-card">
 <p>
-
-Certifications will be updated soon.
-
+Your certifications will appear here.
 </p>
-
 </div>
-
-</div>
-
-
-
 
 </div>
 
@@ -380,31 +266,5 @@ Certifications will be updated soon.
 
 </section>
 
-
-
-
-<script>
-
-function toggleSection(id){
-
-const section=document.getElementById(id)
-
-if(section.style.display==="block"){
-
-section.style.display="none"
-
-}else{
-
-section.style.display="block"
-
-}
-
-}
-
-</script>
-
-
-
 </body>
-
 </html>
