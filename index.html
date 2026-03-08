@@ -2,69 +2,71 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-<title>Rekha Tanmayee</title>
+
+<title>Rekha Tanmayee Annabathuni</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
+
 
 
 <body>
 
+
+
 <!-- NAVBAR -->
 
-<nav class="navbar">
+<header class="navbar">
 
-<h2 class="logo">ART</h2>
+<div class="logo">ART</div>
 
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#story">Interests</a></li>
-<li><a href="resume.html">Resume</a></li>
-<li><a href="#">Connect</a></li>
-</ul>
+<nav>
+
+<a href="index.html">Home</a>
+<a href="#">Interests</a>
+<a href="resume.html">Resume</a>
+<a href="connect.html">Connect</a>
 
 </nav>
 
+</header>
 
-<!-- HERO -->
+
+
+
+<!-- HERO SECTION -->
 
 <section class="hero">
 
 <div class="overlay"></div>
 
-<div class="hero-container">
-
-<div class="hero-text">
+<div class="hero-content">
 
 <p class="intro">Hey There! I'm</p>
 
 <h1>
-Rekha Tanmayee<br>
+Rekha Tanmayee <br>
 Annabathuni
 </h1>
 
-<p class="tagline">
+<h3>
 AI Student | Toastmaster | PR Designer
-</p>
+</h3>
 
-<p class="subtext">
+<p class="tagline">
 Letting AI handle the data while I handle the design and the talking.
 </p>
 
-<a href="#story" class="button">Know My Story</a>
+<a href="#story" class="btn">Know My Story</a>
 
 </div>
-
-</div>
-
-<div class="scroll-indicator">↓ Scroll</div>
 
 </section>
+
 
 
 
@@ -72,33 +74,32 @@ Letting AI handle the data while I handle the design and the talking.
 
 <section id="story" class="story">
 
-<div class="story-layout">
+<div class="story-container">
 
 <div class="story-text">
 
 <h2>My Story</h2>
 
 <p>
-Hey! Meet Rekha Tanmayee Annabathuni — someone who loves exploring ideas,
-building creative things, and expressing thoughts through communication.
+Hey! Meet Rekha Tanmayee Annabathuni — someone who loves exploring ideas, building creative things, and expressing thoughts through communication.
 </p>
 
 <p>
-Currently a 3rd-year student pursuing Artificial Intelligence & Data Science
-at KIET Group of Institutions, she enjoys experimenting with ideas,
-learning new technologies, and developing creative projects.
+Currently a 3rd-year student pursuing Artificial Intelligence & Data Science at KIET Group of Institutions, I enjoy experimenting with ideas, learning new technologies, and developing creative projects.
 </p>
 
 <p>
-For Rekha, Toastmasters is more than a club — it is a comfort place.
-KW’s Silver Tongue Toastmasters Club has been her home for growth,
-confidence, and leadership.
+For me, Toastmasters is more than a club — it is a comfort place. KW's Silver Tongue Toastmasters Club has been my home for growth, confidence, and leadership.
 </p>
 
 </div>
+
+
 
 <div class="story-image">
+
 <img src="profile.jpeg" alt="Rekha Tanmayee">
+
 </div>
 
 </div>
@@ -107,25 +108,33 @@ confidence, and leadership.
 
 
 
-<!-- QUOTES SLIDER -->
 
-<section class="quotes">
 
-<div class="quote-container">
+<!-- QUOTE SLIDER -->
 
-<button class="arrow left" onclick="prevQuote()">❮</button>
+<section class="quote-section">
 
-<div class="quote-box">
+<div class="quote-slider">
 
-<p id="quote-text">
+<div class="quote">
 "Humility is not thinking less of yourself, but thinking of yourself less."
-</p>
-
-<span id="quote-author">C.S. Lewis</span>
-
+<span>— C.S. Lewis</span>
 </div>
 
-<button class="arrow right" onclick="nextQuote()">❯</button>
+<div class="quote">
+"Leadership is not about being the best. It is about making everyone else better."
+<span>— Unknown</span>
+</div>
+
+<div class="quote">
+"The future belongs to those who learn, adapt, and build."
+<span>— Inspired by AI innovation</span>
+</div>
+
+<div class="quote">
+"Confidence comes not from always being right, but from not fearing to be wrong."
+<span>— Peter T. McIntyre</span>
+</div>
 
 </div>
 
@@ -133,64 +142,18 @@ confidence, and leadership.
 
 
 
-<script>
 
-const quotes = [
+<!-- FOOTER -->
 
-{
-text:"Humility is not thinking less of yourself, but thinking of yourself less.",
-author:"C.S. Lewis"
-},
+<footer style="text-align:center;padding:40px 20px;opacity:0.6">
 
-{
-text:"Speak your mind even if your voice shakes.",
-author:"Maggie Kuhn"
-},
+© 2026 Rekha Tanmayee Annabathuni
 
-{
-text:"Creativity is intelligence having fun.",
-author:"Albert Einstein"
-},
+</footer>
 
-{
-text:"The future belongs to those who combine technology and creativity.",
-author:"Inspired Thought"
-}
 
-];
 
-let current = 0;
-
-function showQuote(index){
-
-const box = document.querySelector(".quote-box");
-
-box.style.opacity = "0";
-box.style.transform = "translateX(40px)";
-
-setTimeout(()=>{
-
-document.getElementById("quote-text").innerText = quotes[index].text;
-document.getElementById("quote-author").innerText = quotes[index].author;
-
-box.style.opacity = "1";
-box.style.transform = "translateX(0)";
-
-},200)
-
-}
-
-function nextQuote(){
-current = (current + 1) % quotes.length;
-showQuote(current);
-}
-
-function prevQuote(){
-current = (current - 1 + quotes.length) % quotes.length;
-showQuote(current);
-}
-
-</script>
 
 </body>
+
 </html>
