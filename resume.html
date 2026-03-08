@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Resume | Rekha Tanmayee</title>
 
@@ -9,29 +11,39 @@
 
 <style>
 
+/* RESUME PAGE */
+
 .resume-page{
 display:grid;
 grid-template-columns:40% 60%;
+gap:60px;
 padding:120px 10%;
 background:#0c0c0c;
 color:white;
 min-height:100vh;
-gap:60px;
 }
+
+/* LEFT TITLE */
 
 .resume-title{
 font-size:70px;
 font-weight:700;
+line-height:1.1;
 }
+
+/* RIGHT SIDE */
 
 .resume-sections{
 width:100%;
 }
 
+/* SECTION BLOCK */
+
 .resume-item{
 border-bottom:1px solid #333;
 padding:25px 0;
 cursor:pointer;
+transition:0.3s;
 }
 
 .resume-header{
@@ -45,83 +57,103 @@ font-weight:600;
 .resume-content{
 max-height:0;
 overflow:hidden;
-transition:0.5s;
-opacity:0.8;
-}
-
-.resume-content p{
-margin-top:15px;
-line-height:1.6;
+transition:0.4s;
+opacity:0.9;
 }
 
 .resume-item.active .resume-content{
-max-height:300px;
-margin-top:10px;
+max-height:800px;
+margin-top:20px;
 }
+
+/* TEXT */
+
+.resume-content p{
+margin-bottom:20px;
+line-height:1.6;
+font-size:16px;
+}
+
+/* ARROW */
 
 .arrow{
 font-size:20px;
 opacity:0.6;
 }
 
+.resume-item:hover{
+color:#3fa9f5;
+}
+
+/* SKILL CATEGORY */
+
+.skill-title{
+font-weight:600;
+margin-top:15px;
+}
+
 </style>
 
 </head>
+
 
 <body>
 
 <section class="resume-page">
 
+<!-- LEFT SIDE -->
+
 <div class="resume-title">
 
-My Resume
+My<br>Resume
 
 </div>
 
 
+<!-- RIGHT SIDE -->
+
 <div class="resume-sections">
+
 
 <!-- EDUCATION -->
 
 <div class="resume-item">
 
 <div class="resume-header">
-
 Education
-
 <span class="arrow">⌄</span>
-
 </div>
 
 <div class="resume-content">
 
 <p>
 
-<strong>KIET Group of Institutions</strong><br>
-Bachelor of Technology – Artificial Intelligence & Data Science<br>
-Aug 2023 – Apr 2027
+<strong>KIET Group of Institutions — Class of 2027</strong><br>
+Bachelor of Technology in Artificial Intelligence & Data Science (JNTUK)<br>
+Cumulative CGPA: <strong>8.6 (78%)</strong>
 
 </p>
 
 <p>
 
-<strong>Aditya Educational Institutions</strong><br>
-Intermediate – MPC<br>
-Jun 2021 – May 2023
+<strong>Aditya Educational Institutions — Class of 2023</strong><br>
+Intermediate in Mathematics, Physics & Chemistry (AP State Board)<br>
+Cumulative Percentage: <strong>94.5%</strong>
 
 </p>
 
 <p>
 
-<strong>Akshara School</strong><br>
-Matriculation<br>
-2010 – 2021
+<strong>Akshara School — Class of 2021</strong><br>
+Matriculation (CBSE)<br>
+Cumulative Percentage: <strong>90%</strong>
 
 </p>
 
 </div>
 
 </div>
+
 
 
 <!-- LEADERSHIP -->
@@ -129,36 +161,55 @@ Matriculation<br>
 <div class="resume-item">
 
 <div class="resume-header">
-
 Leadership & Extracurriculars
-
 <span class="arrow">⌄</span>
-
 </div>
 
 <div class="resume-content">
 
 <p>
 
-Class Leader and Captain in School
+<strong>KW's Silver Tongue Toastmasters Club</strong><br>
+Club President & Master of Ceremonies<br><br>
+
+Leading club operations, mentoring members, and actively hosting programs to drive engaging and impactful events.
 
 </p>
 
+
 <p>
 
-Single Point of Contact (SPOC) – KIET
+<strong>KIET Group of Institutions</strong><br>
+Single Point of Contact (SPOC), Team Leader & Volunteer<br><br>
+
+Coordinated college programs, volunteered for campus initiatives, and led teams to successfully organize events.
 
 </p>
 
+
 <p>
 
-Team Leader
+<strong>Aravindh Vinayak Vidhyalayam</strong><br>
+Student Coordinator<br><br>
+
+Assisted in organizing student activities and facilitated communication between students and administration.
+
+</p>
+
+
+<p>
+
+<strong>Akshara School</strong><br>
+Class Leader & School Captain<br><br>
+
+Developed leadership, communication, and teamwork skills while representing students.
 
 </p>
 
 </div>
 
 </div>
+
 
 
 <!-- SKILLS -->
@@ -166,28 +217,45 @@ Team Leader
 <div class="resume-item">
 
 <div class="resume-header">
-
 Skills
-
 <span class="arrow">⌄</span>
-
 </div>
 
 <div class="resume-content">
 
+<p class="skill-title">Communication & Leadership</p>
 <p>
-
-Leadership<br>
 Public Speaking<br>
-Poster Designing<br>
-Communication<br>
-Team Management
+Team Management<br>
+Leadership<br>
+Communication
+</p>
 
+<p class="skill-title">Design & Outreach</p>
+<p>
+Canva<br>
+Poster Designing<br>
+Social Media Management
+</p>
+
+<p class="skill-title">Programming & Development</p>
+<p>
+HTML<br>
+CSS<br>
+Python
+</p>
+
+<p class="skill-title">Productivity & Software</p>
+<p>
+Microsoft Word<br>
+Microsoft Excel<br>
+Microsoft PowerPoint
 </p>
 
 </div>
 
 </div>
+
 
 
 <!-- CERTIFICATIONS -->
@@ -195,18 +263,15 @@ Team Management
 <div class="resume-item">
 
 <div class="resume-header">
-
 Certifications
-
 <span class="arrow">⌄</span>
-
 </div>
 
 <div class="resume-content">
 
 <p>
 
-Certification details will be added soon.
+Certifications will be added soon.
 
 </p>
 
@@ -215,12 +280,16 @@ Certification details will be added soon.
 </div>
 
 
+
 </div>
 
 </section>
 
 
+
 <script>
+
+/* ACCORDION */
 
 const items=document.querySelectorAll(".resume-item");
 
@@ -235,6 +304,7 @@ item.classList.toggle("active");
 });
 
 </script>
+
 
 </body>
 
