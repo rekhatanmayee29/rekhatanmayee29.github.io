@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,10 +10,12 @@
 <link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-
 </head>
 
+
 <body>
+
+<!-- NAVBAR -->
 
 <nav class="navbar">
 
@@ -22,7 +23,7 @@
 
 <ul>
 <li><a href="#">Home</a></li>
-<li><a href="#">Interests</a></li>
+<li><a href="#story">Interests</a></li>
 <li><a href="#">Resume</a></li>
 <li><a href="#">Connect</a></li>
 </ul>
@@ -30,6 +31,7 @@
 </nav>
 
 
+<!-- HERO -->
 
 <section class="hero">
 
@@ -60,13 +62,13 @@ Letting AI handle the data while I handle the design and the talking.
 
 </div>
 
-<div class="scroll-indicator">
-↓ Scroll
-</div>
+<div class="scroll-indicator">↓ Scroll</div>
 
 </section>
 
 
+
+<!-- MY STORY -->
 
 <section id="story" class="story">
 
@@ -96,15 +98,86 @@ confidence, and leadership.
 </div>
 
 <div class="story-image">
-
 <img src="profile.jpeg" alt="Rekha Tanmayee">
-
 </div>
 
 </div>
 
 </section>
 
-</body>
 
+
+<!-- QUOTES SLIDER -->
+
+<section class="quotes">
+
+<div class="quote-container">
+
+<button class="arrow left" onclick="prevQuote()">❮</button>
+
+<div class="quote-box">
+
+<p id="quote-text">
+"Humility is not thinking less of yourself, but thinking of yourself less."
+</p>
+
+<span id="quote-author">C.S. Lewis</span>
+
+</div>
+
+<button class="arrow right" onclick="nextQuote()">❯</button>
+
+</div>
+
+</section>
+
+
+
+<script>
+
+const quotes = [
+
+{
+text:"Humility is not thinking less of yourself, but thinking of yourself less.",
+author:"C.S. Lewis"
+},
+
+{
+text:"Speak your mind even if your voice shakes.",
+author:"Maggie Kuhn"
+},
+
+{
+text:"The future belongs to those who learn more skills and combine them creatively.",
+author:"Robert Greene"
+},
+
+{
+text:"Success is not final, failure is not fatal: it is the courage to continue that counts.",
+author:"Winston Churchill"
+}
+
+];
+
+let current = 0;
+
+function showQuote(index){
+document.getElementById("quote-text").innerText = quotes[index].text;
+document.getElementById("quote-author").innerText = quotes[index].author;
+}
+
+function nextQuote(){
+current = (current + 1) % quotes.length;
+showQuote(current);
+}
+
+function prevQuote(){
+current = (current - 1 + quotes.length) % quotes.length;
+showQuote(current);
+}
+
+</script>
+
+
+</body>
 </html>
