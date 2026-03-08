@@ -5,319 +5,376 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<header class="navbar">
 
-<div class="logo">ART</div>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="interests.html">Interests</a>
-<a href="resume.html">Resume</a>
-<a href="connect.html">Connect</a>
-</nav>
-
-</header>
 <title>Resume | Rekha Tanmayee</title>
 
 <link rel="stylesheet" href="style.css">
 
 <style>
 
-/* PAGE */
-
-body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#0c0c0c;
-color:white;
-}
-
-/* RESUME LAYOUT */
+/* Resume page background */
 
 .resume-page{
-display:grid;
-grid-template-columns:40% 60%;
-gap:60px;
-padding:120px 10%;
+
+background:linear-gradient(135deg,#1e88e5,#0d47a1);
+
 min-height:100vh;
+
+padding-top:120px;
+
+color:white;
+
+font-family:Arial, Helvetica, sans-serif;
+
 }
 
-/* LEFT SIDE TITLE */
+
+
+/* resume container */
+
+.resume-container{
+
+width:80%;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+}
+
+
+
+/* title */
 
 .resume-title{
-font-size:70px;
+
+font-size:60px;
+
 font-weight:700;
-line-height:1.1;
+
 }
 
-/* RIGHT SIDE */
 
-.resume-sections{
-width:100%;
-}
 
-/* EACH SECTION */
+/* accordion section */
 
-.resume-item{
-border-bottom:1px solid #333;
-padding:25px 0;
+.resume-section{
+
+border-bottom:1px solid rgba(255,255,255,0.4);
+
+padding:20px 0;
+
 cursor:pointer;
-transition:0.3s;
+
 }
 
-.resume-header{
+
+
+.resume-section h2{
+
+font-size:36px;
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
-font-size:32px;
-font-weight:600;
+
 }
+
+
 
 .resume-content{
-max-height:0;
-overflow:hidden;
-transition:0.4s;
-opacity:0.9;
-max-width:600px;
-}
 
-/* OPEN SECTION */
-
-.resume-item.active .resume-content{
-max-height:900px;
 margin-top:20px;
+
+display:none;
+
 }
 
-/* TEXT */
+
 
 .resume-content p{
-margin-bottom:10px;
+
+margin-bottom:20px;
+
 line-height:1.6;
-font-size:16px;
+
 }
 
-/* BULLETS */
+
+
+/* bullets */
 
 .resume-content ul{
-margin:10px 0 25px 20px;
+
+padding-left:20px;
+
 }
+
+
 
 .resume-content li{
-margin-bottom:6px;
-line-height:1.5;
+
+margin-bottom:15px;
+
+line-height:1.6;
+
 }
 
-/* ARROW */
 
-.arrow{
-font-size:20px;
-opacity:0.6;
-}
-
-.resume-item:hover{
-color:#3fa9f5;
-}
-
-/* SKILL CATEGORY */
-
-.skill-title{
-font-weight:600;
-margin-top:20px;
-}
 
 </style>
 
 </head>
 
 
+
 <body>
+
+
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+<div class="logo">ART</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="#">Interests</a>
+<a href="resume.html">Resume</a>
+<a href="connect.html">Connect</a>
+
+</nav>
+
+</header>
+
+
+
+
+<!-- RESUME SECTION -->
 
 <section class="resume-page">
 
+<div class="resume-container">
+
+
+
 <!-- LEFT SIDE -->
 
-<div class="resume-title">
-My<br>Resume
+<div>
+
+<h1 class="resume-title">My Resume</h1>
+
 </div>
+
+
 
 
 <!-- RIGHT SIDE -->
 
-<div class="resume-sections">
+<div>
+
 
 
 <!-- EDUCATION -->
 
-<div class="resume-item">
+<div class="resume-section" onclick="toggleSection('education')">
 
-<div class="resume-header">
-Education
-<span class="arrow">⌄</span>
-</div>
+<h2>Education ⌄</h2>
 
-<div class="resume-content">
+<div id="education" class="resume-content">
 
-<p>
+<ul>
+
+<li>
+
 <strong>KIET Group of Institutions — Class of 2027</strong><br>
+
 Bachelor of Technology in Artificial Intelligence & Data Science (JNTUK)<br>
-Cumulative CGPA: <strong>8.6 (78%)</strong>
-</p>
 
-<p>
+Cumulative CGPA: 8.6 (78%)
+
+</li>
+
+
+<li>
+
 <strong>Aditya Educational Institutions — Class of 2023</strong><br>
-Intermediate in Mathematics, Physics & Chemistry (AP State Board)<br>
-Cumulative Percentage: <strong>94.5%</strong>
-</p>
 
-<p>
+Intermediate in Math, Physics, and Chemistry (AP State Board)<br>
+
+Cumulative Percentage: 94.5%
+
+</li>
+
+
+<li>
+
 <strong>Akshara School — Class of 2021</strong><br>
+
 Matriculation (CBSE)<br>
-Cumulative Percentage: <strong>90%</strong>
-</p>
+
+Cumulative Percentage: 90%
+
+</li>
+
+</ul>
 
 </div>
 
 </div>
+
 
 
 
 <!-- LEADERSHIP -->
 
-<div class="resume-item">
+<div class="resume-section" onclick="toggleSection('leadership')">
 
-<div class="resume-header">
-Leadership & Extracurriculars
-<span class="arrow">⌄</span>
-</div>
+<h2>Leadership & Extracurriculars ⌄</h2>
 
-<div class="resume-content">
+<div id="leadership" class="resume-content">
 
-<p>
+<ul>
+
+<li>
+
 <strong>KW's Silver Tongue Toastmasters Club</strong><br>
-Club President & Master of Ceremonies
-</p>
 
-<ul>
-<li>Leading club operations and mentoring members</li>
-<li>Hosting engaging and impactful club meetings</li>
-<li>Encouraging members to develop confidence and communication skills</li>
-</ul>
+Club President & Master of Ceremonies<br>
+
+Leading club operations, mentoring members, and actively hosting programs to drive engaging and impactful events.
+
+</li>
 
 
-<p>
+
+<li>
+
 <strong>KIET Group of Institutions</strong><br>
-Single Point of Contact (SPOC), Team Leader & Volunteer
-</p>
 
-<ul>
-<li>Coordinated various college programs and activities</li>
-<li>Volunteered in organizing campus initiatives</li>
-<li>Led teams to execute events successfully</li>
-</ul>
+Single Point of Contact (SPOC), Team Leader & Volunteer<br>
+
+Coordinated college programs, volunteered for campus initiatives, and led teams to successfully organize events.
+
+</li>
 
 
-<p>
+
+<li>
+
 <strong>Aravindh Vinayak Vidhyalayam</strong><br>
-Student Coordinator
-</p>
 
-<ul>
-<li>Organized student activities and academic programs</li>
-<li>Bridged communication between students and administration</li>
-</ul>
+Student Coordinator<br>
+
+Assisted in organizing student activities and facilitated communication between students and administration.
+
+</li>
 
 
-<p>
+
+<li>
+
 <strong>Akshara School</strong><br>
-Class Leader & School Captain
-</p>
 
-<ul>
-<li>Represented students in academic and co-curricular activities</li>
-<li>Developed leadership, teamwork, and communication skills</li>
+Class Leader & School Captain<br>
+
+Developed foundational leadership, communication, and teamwork skills during early academic years.
+
+</li>
+
 </ul>
 
 </div>
 
 </div>
+
 
 
 
 <!-- SKILLS -->
 
-<div class="resume-item">
+<div class="resume-section" onclick="toggleSection('skills')">
 
-<div class="resume-header">
-Skills
-<span class="arrow">⌄</span>
+<h2>Skills ⌄</h2>
+
+<div id="skills" class="resume-content">
+
+<ul>
+
+<li>
+
+<strong>Communication & Leadership</strong><br>
+
+Public Speaking, Team Management, Leadership, Communication
+
+</li>
+
+
+<li>
+
+<strong>Design & Outreach</strong><br>
+
+Canva, Poster Designing, Social Media Management
+
+</li>
+
+
+<li>
+
+<strong>Programming & Development</strong><br>
+
+HTML, CSS, Python
+
+</li>
+
+
+<li>
+
+<strong>Productivity & Software</strong><br>
+
+Microsoft Word, Excel, PowerPoint
+
+</li>
+
+</ul>
+
 </div>
 
-<div class="resume-content">
-
-<p class="skill-title">Communication & Leadership</p>
-
-<ul>
-<li>Public Speaking</li>
-<li>Team Management</li>
-<li>Leadership</li>
-<li>Communication</li>
-</ul>
-
-
-<p class="skill-title">Design & Outreach</p>
-
-<ul>
-<li>Canva</li>
-<li>Poster Designing</li>
-<li>Social Media Management</li>
-</ul>
-
-
-<p class="skill-title">Programming & Development</p>
-
-<ul>
-<li>HTML</li>
-<li>CSS</li>
-<li>Python</li>
-</ul>
-
-
-<p class="skill-title">Productivity & Software</p>
-
-<ul>
-<li>Microsoft Word</li>
-<li>Microsoft Excel</li>
-<li>Microsoft PowerPoint</li>
-</ul>
-
 </div>
 
-</div>
 
 
 
 <!-- CERTIFICATIONS -->
 
-<div class="resume-item">
+<div class="resume-section" onclick="toggleSection('certifications')">
 
-<div class="resume-header">
-Certifications
-<span class="arrow">⌄</span>
-</div>
+<h2>Certifications ⌄</h2>
 
-<div class="resume-content">
+<div id="certifications" class="resume-content">
 
-<ul>
-<li>Certification details will be added soon</li>
-<li>Certification details will be added soon</li>
-<li>Certification details will be added soon</li>
-</ul>
+<p>
+
+Certifications will be updated soon.
+
+</p>
 
 </div>
 
 </div>
 
 
+
+
+</div>
 
 </div>
 
@@ -325,23 +382,28 @@ Certifications
 
 
 
+
 <script>
 
-/* ACCORDION */
+function toggleSection(id){
 
-const items = document.querySelectorAll(".resume-item");
+const section=document.getElementById(id)
 
-items.forEach(item => {
+if(section.style.display==="block"){
 
-item.addEventListener("click", () => {
+section.style.display="none"
 
-item.classList.toggle("active");
+}else{
 
-});
+section.style.display="block"
 
-});
+}
+
+}
 
 </script>
+
+
 
 </body>
 
