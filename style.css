@@ -1,34 +1,74 @@
-html{
-scroll-behavior:smooth;
+/* GOOGLE FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-margin:0;
-font-family:'Poppins',sans-serif;
+background:#0c0c0c;
 color:white;
+overflow-x:hidden;
 }
 
-<header class="navbar">
 
-<div class="logo">ART</div>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="interests.html">Interests</a>
-<a href="resume.html">Resume</a>
-<a href="connect.html">Connect</a>
-</nav>
+/* NAVBAR */
 
-</header>
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(0,0,0,0.55);
+backdrop-filter:blur(8px);
+z-index:1000;
+}
 
-/* HERO */
+.logo{
+font-size:22px;
+font-weight:700;
+letter-spacing:3px;
+}
+
+.navbar nav{
+display:flex;
+gap:40px;
+}
+
+.navbar a{
+text-decoration:none;
+color:white;
+font-size:16px;
+transition:0.3s;
+}
+
+.navbar a:hover{
+opacity:0.6;
+}
+
+
+
+/* HERO SECTION */
 
 .hero{
 height:100vh;
-background:url("background.jpg") center/cover no-repeat;
-position:relative;
+background:url("background.JPG") center/cover no-repeat;
 display:flex;
 align-items:center;
+padding:0 10%;
+position:relative;
 }
 
 .overlay{
@@ -37,139 +77,349 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.45);
+background:rgba(0,0,0,0.55);
 }
 
-.hero-container{
+.hero-content{
 position:relative;
 z-index:2;
-padding:0 7%;
-}
-
-.hero-text{
-max-width:520px;
+max-width:650px;
 }
 
 .intro{
 font-size:18px;
-opacity:0.85;
+margin-bottom:10px;
+opacity:0.9;
 }
 
-.hero-text h1{
-font-size:48px;
-line-height:1.15;
-margin:10px 0 20px 0;
+.hero h1{
+font-size:70px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero h3{
+font-size:22px;
+font-weight:400;
+margin-bottom:20px;
+opacity:0.9;
 }
 
 .tagline{
-font-size:20px;
-margin-bottom:15px;
+font-size:16px;
+opacity:0.75;
 }
 
-.subtext{
-opacity:0.8;
-margin-bottom:30px;
-}
-
-.button{
+.btn{
+display:inline-block;
+margin-top:30px;
 padding:12px 28px;
 background:white;
 color:black;
 text-decoration:none;
-border-radius:8px;
+border-radius:6px;
+font-weight:600;
+transition:0.3s;
 }
 
-.scroll-indicator{
-position:absolute;
-bottom:30px;
-left:50%;
-transform:translateX(-50%);
-opacity:0.7;
+.btn:hover{
+transform:scale(1.05);
 }
 
-/* STORY */
+
+
+/* MY STORY */
 
 .story{
-background:#0f0f0f;
-padding:120px 7%;
+padding:120px 10%;
+background:#0c0c0c;
 }
 
-.story-layout{
-display:grid;
-grid-template-columns:1fr 300px;
-gap:120px;
+.story-container{
+display:flex;
 align-items:center;
-max-width:1100px;
-margin:auto;
+gap:80px;
+}
+
+.story-text{
+flex:1;
 }
 
 .story-text h2{
-font-size:36px;
-margin-bottom:20px;
+font-size:48px;
+margin-bottom:25px;
 }
 
 .story-text p{
-line-height:1.8;
+margin-bottom:18px;
+line-height:1.7;
+opacity:0.85;
+}
+
+.story-image{
+flex:1;
+}
+
+.story-image img{
+width:320px;
+border-radius:14px;
+}
+
+
+
+/* QUOTE SLIDER */
+
+.quote-section{
+padding:120px 0;
+text-align:center;
+background:#111;
+overflow:hidden;
+}
+
+.quote-slider{
+display:flex;
+animation:slideQuotes 20s linear infinite;
+gap:120px;
+}
+
+.quote{
+min-width:100%;
+font-size:28px;
+font-weight:500;
+opacity:0.9;
+}
+
+.quote span{
+display:block;
+margin-top:15px;
+font-size:16px;
+opacity:0.6;
+}
+
+@keyframes slideQuotes{
+
+0%{transform:translateX(0);}
+
+25%{transform:translateX(-100%);}
+
+50%{transform:translateX(-200%);}
+
+75%{transform:translateX(-300%);}
+
+100%{transform:translateX(0);}
+
+}
+
+
+
+/* RESUME PAGE */
+
+.resume-hero{
+height:60vh;
+display:flex;
+align-items:center;
+padding:0 10%;
+background:linear-gradient(135deg,#0d2d3d,#14698c);
+}
+
+.resume-hero h1{
+font-size:70px;
+}
+
+
+
+/* RESUME CONTENT */
+
+.resume-content{
+padding:100px 10%;
+max-width:1000px;
+margin:auto;
+}
+
+.resume-block{
+margin-bottom:80px;
+}
+
+.resume-block h2{
+font-size:38px;
+margin-bottom:25px;
+border-bottom:1px solid rgba(255,255,255,0.15);
+padding-bottom:10px;
+}
+
+
+
+/* EDUCATION */
+
+.education-item{
+margin-bottom:30px;
+}
+
+.education-item h3{
+font-size:22px;
+}
+
+.education-item p{
+opacity:0.8;
+margin-top:5px;
+}
+
+
+
+/* LEADERSHIP BULLETS */
+
+.leadership-list{
+list-style:none;
+margin-top:20px;
+}
+
+.leadership-list li{
+margin-bottom:30px;
+padding-left:28px;
+position:relative;
+line-height:1.6;
+}
+
+.leadership-list li::before{
+content:"●";
+position:absolute;
+left:0;
+color:#1ec7ff;
+font-size:18px;
+}
+
+
+
+/* SKILLS */
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+margin-top:25px;
+}
+
+.skill-card{
+background:#151515;
+padding:25px;
+border-radius:10px;
+}
+
+.skill-card h3{
+margin-bottom:10px;
+color:#1ec7ff;
+}
+
+
+
+/* TOASTMASTERS CARD */
+
+.toastmasters-card{
+margin-top:100px;
+display:flex;
+justify-content:center;
+}
+
+.toastmasters-box{
+position:relative;
+cursor:pointer;
+overflow:hidden;
+border-radius:10px;
+}
+
+.toastmasters-box img{
+width:420px;
+transition:0.4s;
+}
+
+.toastmasters-box:hover img{
+transform:scale(1.08);
+}
+
+.toastmasters-overlay{
+position:absolute;
+bottom:0;
+background:rgba(0,0,0,0.7);
+width:100%;
+padding:15px;
+text-align:center;
+}
+
+
+
+/* CONNECT PAGE */
+
+.connect-section{
+min-height:100vh;
+background:linear-gradient(135deg,#0c0c0c,#1d2a35);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:120px 20px;
+}
+
+.connect-title{
+font-size:60px;
 margin-bottom:20px;
+}
+
+.connect-text{
+max-width:600px;
+opacity:0.8;
+margin-bottom:50px;
+line-height:1.6;
+}
+
+.social-links{
+display:flex;
+gap:40px;
+font-size:30px;
+}
+
+.social-links a{
+color:white;
+transition:0.3s;
+text-decoration:none;
+}
+
+.social-links a:hover{
+transform:scale(1.2);
+opacity:0.7;
+}
+
+.email{
+margin-top:40px;
+font-size:18px;
+opacity:0.9;
+}
+
+
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:48px;
+}
+
+.story-container{
+flex-direction:column;
+text-align:center;
 }
 
 .story-image img{
 width:260px;
-border-radius:12px;
-box-shadow:0 20px 40px rgba(0,0,0,0.6);
 }
 
-/* QUOTES SECTION */
-
-.quotes{
-background:#0f0f0f;
-padding:120px 10%;
-text-align:center;
+.skills-grid{
+grid-template-columns:1fr;
 }
 
-.quote-container{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:40px;
-max-width:900px;
-margin:auto;
+.resume-hero h1{
+font-size:50px;
 }
 
-.quote-box{
-max-width:650px;
-padding:40px;
-background:#151515;
-border-radius:12px;
-box-shadow:0 0 30px rgba(0,0,0,0.5);
-transition:0.4s;
-}
-
-.quote-box p{
-font-size:26px;
-line-height:1.6;
-margin-bottom:15px;
-color:#ffffff;
-}
-
-.quote-box span{
-font-size:15px;
-opacity:0.7;
-color:#9ecfff;
-}
-
-.arrow{
-background:#1c1c1c;
-color:white;
-border:none;
-width:50px;
-height:50px;
-border-radius:50%;
-font-size:20px;
-cursor:pointer;
-transition:0.3s;
-}
-
-.arrow:hover{
-background:#2f7ea4;
 }
