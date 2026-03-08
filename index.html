@@ -148,13 +148,13 @@ author:"Maggie Kuhn"
 },
 
 {
-text:"The future belongs to those who learn more skills and combine them creatively.",
-author:"Robert Greene"
+text:"Creativity is intelligence having fun.",
+author:"Albert Einstein"
 },
 
 {
-text:"Success is not final, failure is not fatal: it is the courage to continue that counts.",
-author:"Winston Churchill"
+text:"The future belongs to those who combine technology and creativity.",
+author:"Inspired Thought"
 }
 
 ];
@@ -162,8 +162,22 @@ author:"Winston Churchill"
 let current = 0;
 
 function showQuote(index){
+
+const box = document.querySelector(".quote-box");
+
+box.style.opacity = "0";
+box.style.transform = "translateX(40px)";
+
+setTimeout(()=>{
+
 document.getElementById("quote-text").innerText = quotes[index].text;
 document.getElementById("quote-author").innerText = quotes[index].author;
+
+box.style.opacity = "1";
+box.style.transform = "translateX(0)";
+
+},200)
+
 }
 
 function nextQuote(){
@@ -177,7 +191,6 @@ showQuote(current);
 }
 
 </script>
-
 
 </body>
 </html>
