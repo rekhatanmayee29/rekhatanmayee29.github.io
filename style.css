@@ -124,31 +124,30 @@ border-radius:14px;
 
 .quote-section{
 background:#0f0f0f;
-padding:120px 20px;
+padding:140px 20px;
 text-align:center;
+}
+
+.quote-intro{
+font-size:18px;
+opacity:0.6;
+margin-bottom:30px;
+}
+
+.quote-text{
+font-size:44px;
+font-weight:500;
+line-height:1.6;
 max-width:900px;
 margin:auto;
 }
 
-.quote-intro{
-font-size:16px;
-opacity:0.6;
-margin-bottom:20px;
-letter-spacing:1px;
-}
-
-.quote-text{
-font-size:42px;
-font-weight:500;
-line-height:1.6;
-margin:auto;
-}
-
 .quote-author{
-margin-top:25px;
+margin-top:40px;
 font-size:20px;
-opacity:0.7;
+opacity:0.75;
 }
+
 /* FOOTER */
 
 .footer{
