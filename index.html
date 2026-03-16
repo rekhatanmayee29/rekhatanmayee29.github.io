@@ -93,37 +93,46 @@ For me, Toastmasters is more than a club — it is a comfort place. KW's Silver 
 
 <section class="quote-section">
 
-<button class="quote-btn left" onclick="prevQuote()">&#8592;</button>
+<div class="quote-slider">
 
-<div class="quote-container">
+<button class="arrow left" onclick="prevQuote()">❮</button>
+
+<div class="quote-box">
 
 <p class="quote active">
+"Confidence comes not from always being right, but from not fearing to be wrong."
+</p>
+
+<p class="author active">Peter T. McIntyre</p>
+
+
+<p class="quote">
 "Humility is not thinking less of yourself, but thinking of yourself less."
 </p>
+
+<p class="author">C.S. Lewis</p>
+
 
 <p class="quote">
 "Leadership is not about being the best. It is about making everyone else better."
 </p>
 
+<p class="author">Unknown</p>
+
+
 <p class="quote">
 "The future belongs to those who learn, adapt, and build."
 </p>
 
-<p class="quote">
-"Confidence comes not from always being right, but from not fearing to be wrong."
-</p>
-
-<p class="author active">C.S. Lewis</p>
-<p class="author">Unknown</p>
 <p class="author">Inspired by AI innovation</p>
-<p class="author">Peter T. McIntyre</p>
 
 </div>
 
-<button class="quote-btn right" onclick="nextQuote()">&#8594;</button>
+<button class="arrow right" onclick="nextQuote()">❯</button>
+
+</div>
 
 </section>
-
 
 
 <!-- FOOTER -->
@@ -135,7 +144,7 @@ For me, Toastmasters is more than a club — it is a comfort place. KW's Silver 
 
 <script>
 
-let index = 0;
+let current = 0;
 
 const quotes = document.querySelectorAll(".quote");
 const authors = document.querySelectorAll(".author");
@@ -152,25 +161,25 @@ authors[i].classList.add("active");
 
 function nextQuote(){
 
-index++;
+current++;
 
-if(index >= quotes.length){
-index = 0;
+if(current >= quotes.length){
+current = 0;
 }
 
-showQuote(index);
+showQuote(current);
 
 }
 
 function prevQuote(){
 
-index--;
+current--;
 
-if(index < 0){
-index = quotes.length - 1;
+if(current < 0){
+current = quotes.length-1;
 }
 
-showQuote(index);
+showQuote(current);
 
 }
 
