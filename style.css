@@ -124,23 +124,28 @@ border-radius:14px;
 /* QUOTE SECTION */
 
 .quote-section{
-background:#f4f4f4;
-color:#2b6f95;
-padding:120px 10%;
+background:#0f0f0f;
+padding:120px 0;
 display:flex;
-align-items:center;
 justify-content:center;
-position:relative;
-text-align:center;
+align-items:center;
 }
 
-.quote-container{
+.quote-slider{
+display:flex;
+align-items:center;
+gap:40px;
 max-width:900px;
+}
+
+.quote-box{
+text-align:center;
+width:700px;
 }
 
 .quote{
 display:none;
-font-size:38px;
+font-size:34px;
 font-weight:500;
 line-height:1.5;
 }
@@ -153,7 +158,7 @@ display:block;
 display:none;
 margin-top:20px;
 font-size:18px;
-color:#5c7c92;
+opacity:0.7;
 }
 
 .author.active{
@@ -163,51 +168,23 @@ display:block;
 
 /* ARROWS */
 
-.quote-btn{
-position:absolute;
-top:50%;
-transform:translateY(-50%);
-background:#2b6f95;
+.arrow{
+background:#222;
 border:none;
 color:white;
-font-size:22px;
+font-size:28px;
 width:55px;
 height:55px;
 border-radius:50%;
 cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
-.quote-btn.left{
-left:40px;
+.arrow:hover{
+background:#444;
 }
-
-.quote-btn.right{
-right:40px;
-}
-
-.quote-btn:hover{
-background:#1e4f6a;
-}
-
-
-/* ARROWS */
-
-.quote-arrow{
-background:#1f1f1f;
-border:none;
-color:white;
-font-size:30px;
-width:55px;
-height:55px;
-border-radius:50%;
-cursor:pointer;
-}
-
-.quote-arrow:hover{
-background:#333;
-}
-
-
 
 /* FOOTER */
 
