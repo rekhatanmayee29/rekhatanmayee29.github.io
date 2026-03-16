@@ -103,28 +103,22 @@ For me, Toastmasters is more than a club — it is a comfort place. KW's Silver 
 
 
 <!-- QUOTES -->
-
 <section class="quote-section">
+
+<div class="quote-wrapper">
+
+<button class="quote-arrow left" onclick="prevQuote()">&#10094;</button>
 
 <div class="quote-container">
 
-<button class="quote-arrow" onclick="prevQuote()">&#8593;</button>
-
-<div class="quote-slider">
-
-<div class="quote">
-"Humility is not thinking less of yourself, but thinking of yourself less."
-<span>- C.S. Lewis</span>
+<div class="quote active">
+"The future belongs to those who learn, adapt, and build."
+<span>— Inspired by AI innovation</span>
 </div>
 
 <div class="quote">
 "Leadership is not about being the best. It is about making everyone else better."
-<span>- Dr. Brigette Hyacinth</span>
-</div>
-
-<div class="quote">
-"The future belongs to those who learn, adapt, and build."
-<span>— Inspired by AI innovation</span>
+<span>— Unknown</span>
 </div>
 
 <div class="quote">
@@ -132,9 +126,14 @@ For me, Toastmasters is more than a club — it is a comfort place. KW's Silver 
 <span>— Peter T. McIntyre</span>
 </div>
 
+<div class="quote">
+"Humility is not thinking less of yourself, but thinking of yourself less."
+<span>— C.S. Lewis</span>
 </div>
 
-<button class="quote-arrow" onclick="nextQuote()">&#8595;</button>
+</div>
+
+<button class="quote-arrow right" onclick="nextQuote()">&#10095;</button>
 
 </div>
 
@@ -155,25 +154,29 @@ For me, Toastmasters is more than a club — it is a comfort place. KW's Silver 
 
 <script>
 
-let quoteIndex = 0;
+let currentQuote = 0;
 const quotes = document.querySelectorAll(".quote");
 
-function showQuote(){
-
-quotes.forEach(q => q.style.display = "none");
-
-quotes[quoteIndex].style.display = "block";
-
-quoteIndex++;
-
-if(quoteIndex >= quotes.length){
-quoteIndex = 0;
+function showQuote(index){
+quotes.forEach(q => q.classList.remove("active"));
+quotes[index].classList.add("active");
 }
 
+function nextQuote(){
+currentQuote++;
+if(currentQuote >= quotes.length){
+currentQuote = 0;
+}
+showQuote(currentQuote);
 }
 
-setInterval(showQuote,6000);
-showQuote();
+function prevQuote(){
+currentQuote--;
+if(currentQuote < 0){
+currentQuote = quotes.length - 1;
+}
+showQuote(currentQuote);
+}
 
 </script>
 
