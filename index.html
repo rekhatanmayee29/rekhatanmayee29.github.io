@@ -88,48 +88,15 @@ For me, Toastmasters is more than a club — it is a comfort place. KW's Silver 
 
 
 
-<!-- QUOTES -->
 <section class="quote-section">
 
-<div class="quote-slider">
-
-<button class="arrow left" onclick="prevQuote()">❮</button>
-
-<div class="quote-box">
-
-<div class="quote-item active">
-<p class="quote">
-"Confidence comes not from always being right, but from not fearing to be wrong."
-</p>
-<p class="author">— Peter T. McIntyre</p>
-</div>
-
-<div class="quote-item">
-<p class="quote">
-"Humility is not thinking less of yourself, but thinking of yourself less."
-</p>
-<p class="author">— C.S. Lewis</p>
-</div>
-
-<div class="quote-item">
-<p class="quote">
+<p class="quote-text">
 "Leadership is not about being the best. It is about making everyone else better."
 </p>
-<p class="author">— Unknown</p>
-</div>
 
-<div class="quote-item">
-<p class="quote">
-"The future belongs to those who learn, adapt, and build."
+<p class="quote-author">
+— Dr. Brigette Hyacinth
 </p>
-<p class="author">— Inspired by AI innovation</p>
-</div>
-
-</div>
-
-<button class="arrow right" onclick="nextQuote()">❯</button>
-
-</div>
 
 </section>
 
@@ -141,46 +108,6 @@ For me, Toastmasters is more than a club — it is a comfort place. KW's Silver 
 </footer>
 
 
-
-<script>
-
-let current = 0;
-
-const quotes = document.querySelectorAll(".quote-item");
-
-function showQuote(i){
-
-quotes.forEach(q => q.classList.remove("active"));
-
-quotes[i].classList.add("active");
-
-}
-
-function nextQuote(){
-
-current++;
-
-if(current >= quotes.length){
-current = 0;
-}
-
-showQuote(current);
-
-}
-
-function prevQuote(){
-
-current--;
-
-if(current < 0){
-current = quotes.length - 1;
-}
-
-showQuote(current);
-
-}
-
-</script>
 
 </body>
 </html>
