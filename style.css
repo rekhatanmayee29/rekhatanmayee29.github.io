@@ -121,74 +121,25 @@ border-radius:14px;
 
 
 
-/* QUOTE SECTION */
-
 .quote-section{
 background:#0f0f0f;
-padding:120px 0;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-.quote-slider{
-display:flex;
-align-items:center;
-gap:40px;
-max-width:900px;
-}
-
-.quote-box{
+padding:120px 20px;
 text-align:center;
-width:700px;
 }
 
-/* EACH QUOTE BLOCK */
-
-.quote-item{
-display:none;
-}
-
-.quote-item.active{
-display:block;
-}
-
-.quote{
-font-size:34px;
+.quote-text{
+font-size:36px;
 font-weight:500;
-line-height:1.5;
+line-height:1.6;
+max-width:800px;
+margin:auto;
 }
 
-.author{
-margin-top:18px;
+.quote-author{
+margin-top:20px;
 font-size:18px;
 opacity:0.7;
 }
-
-
-
-/* ARROWS */
-
-.arrow{
-background:#222;
-border:none;
-color:white;
-font-size:26px;
-width:55px;
-height:55px;
-border-radius:50%;
-cursor:pointer;
-display:flex;
-align-items:center;
-justify-content:center;
-transition:0.3s;
-}
-
-.arrow:hover{
-background:#444;
-transform:scale(1.08);
-}
-
 /* FOOTER */
 
 .footer{
