@@ -120,24 +120,33 @@ border-radius:14px;
 }
 
 
+/* QUOTE */
 
 .quote-section{
 background:#0f0f0f;
 padding:120px 20px;
 text-align:center;
+max-width:900px;
+margin:auto;
+}
+
+.quote-intro{
+font-size:16px;
+opacity:0.6;
+margin-bottom:20px;
+letter-spacing:1px;
 }
 
 .quote-text{
-font-size:36px;
+font-size:42px;
 font-weight:500;
 line-height:1.6;
-max-width:800px;
 margin:auto;
 }
 
 .quote-author{
-margin-top:20px;
-font-size:18px;
+margin-top:25px;
+font-size:20px;
 opacity:0.7;
 }
 /* FOOTER */
