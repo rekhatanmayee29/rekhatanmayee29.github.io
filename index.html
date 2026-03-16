@@ -7,7 +7,6 @@
 <title>Rekha Tanmayee Annabathuni</title>
 
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -90,7 +89,6 @@ For me, Toastmasters is more than a club — it is a comfort place. KW's Silver 
 
 
 <!-- QUOTES -->
-
 <section class="quote-section">
 
 <div class="quote-slider">
@@ -99,32 +97,33 @@ For me, Toastmasters is more than a club — it is a comfort place. KW's Silver 
 
 <div class="quote-box">
 
-<p class="quote active">
+<div class="quote-item active">
+<p class="quote">
 "Confidence comes not from always being right, but from not fearing to be wrong."
 </p>
+<p class="author">— Peter T. McIntyre</p>
+</div>
 
-<p class="author active">Peter T. McIntyre</p>
-
-
+<div class="quote-item">
 <p class="quote">
 "Humility is not thinking less of yourself, but thinking of yourself less."
 </p>
+<p class="author">— C.S. Lewis</p>
+</div>
 
-<p class="author">C.S. Lewis</p>
-
-
+<div class="quote-item">
 <p class="quote">
 "Leadership is not about being the best. It is about making everyone else better."
 </p>
+<p class="author">— Unknown</p>
+</div>
 
-<p class="author">Unknown</p>
-
-
+<div class="quote-item">
 <p class="quote">
 "The future belongs to those who learn, adapt, and build."
 </p>
-
-<p class="author">Inspired by AI innovation</p>
+<p class="author">— Inspired by AI innovation</p>
+</div>
 
 </div>
 
@@ -133,6 +132,7 @@ For me, Toastmasters is more than a club — it is a comfort place. KW's Silver 
 </div>
 
 </section>
+
 
 
 <!-- FOOTER -->
@@ -146,16 +146,13 @@ For me, Toastmasters is more than a club — it is a comfort place. KW's Silver 
 
 let current = 0;
 
-const quotes = document.querySelectorAll(".quote");
-const authors = document.querySelectorAll(".author");
+const quotes = document.querySelectorAll(".quote-item");
 
 function showQuote(i){
 
 quotes.forEach(q => q.classList.remove("active"));
-authors.forEach(a => a.classList.remove("active"));
 
 quotes[i].classList.add("active");
-authors[i].classList.add("active");
 
 }
 
@@ -176,7 +173,7 @@ function prevQuote(){
 current--;
 
 if(current < 0){
-current = quotes.length-1;
+current = quotes.length - 1;
 }
 
 showQuote(current);
