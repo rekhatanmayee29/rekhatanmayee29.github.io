@@ -176,20 +176,27 @@ display:flex;
 justify-content:center;
 }
 
-.quote-container{
+.quote-wrapper{
 display:flex;
-flex-direction:column;
 align-items:center;
-max-width:800px;
+gap:40px;
+max-width:900px;
+}
+
+.quote-container{
 text-align:center;
+width:600px;
 }
 
 .quote{
 display:none;
 font-size:28px;
 font-weight:500;
-opacity:0.9;
-padding:20px;
+line-height:1.5;
+}
+
+.quote.active{
+display:block;
 }
 
 .quote span{
@@ -199,16 +206,17 @@ font-size:16px;
 opacity:0.6;
 }
 
+/* ARROWS */
+
 .quote-arrow{
 background:#1a1a1a;
 border:none;
 color:white;
-font-size:28px;
-width:55px;
-height:55px;
+font-size:32px;
+width:60px;
+height:60px;
 border-radius:50%;
 cursor:pointer;
-margin:25px 0;
 transition:0.3s;
 display:flex;
 align-items:center;
@@ -218,7 +226,6 @@ justify-content:center;
 .quote-arrow:hover{
 background:#333;
 }
-
 
 /* RESUME PAGE */
 
