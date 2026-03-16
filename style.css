@@ -143,27 +143,28 @@ text-align:center;
 width:700px;
 }
 
-.quote{
+/* EACH QUOTE BLOCK */
+
+.quote-item{
 display:none;
+}
+
+.quote-item.active{
+display:block;
+}
+
+.quote{
 font-size:34px;
 font-weight:500;
 line-height:1.5;
 }
 
-.quote.active{
-display:block;
-}
-
 .author{
-display:none;
-margin-top:20px;
+margin-top:18px;
 font-size:18px;
 opacity:0.7;
 }
 
-.author.active{
-display:block;
-}
 
 
 /* ARROWS */
@@ -172,7 +173,7 @@ display:block;
 background:#222;
 border:none;
 color:white;
-font-size:28px;
+font-size:26px;
 width:55px;
 height:55px;
 border-radius:50%;
@@ -180,10 +181,12 @@ cursor:pointer;
 display:flex;
 align-items:center;
 justify-content:center;
+transition:0.3s;
 }
 
 .arrow:hover{
 background:#444;
+transform:scale(1.08);
 }
 
 /* FOOTER */
