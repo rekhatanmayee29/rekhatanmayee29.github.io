@@ -121,42 +121,73 @@ border-radius:14px;
 
 
 
-/* QUOTES */
+/* QUOTE SECTION */
 
 .quote-section{
-padding:120px 0;
-background:#111;
-display:flex;
-justify-content:center;
-}
-
-.quote-wrapper{
+background:#f4f4f4;
+color:#2b6f95;
+padding:120px 10%;
 display:flex;
 align-items:center;
-gap:40px;
-max-width:900px;
+justify-content:center;
+position:relative;
+text-align:center;
 }
 
 .quote-container{
-text-align:center;
-width:600px;
+max-width:900px;
 }
 
 .quote{
 display:none;
-font-size:26px;
-line-height:1.6;
+font-size:38px;
+font-weight:500;
+line-height:1.5;
 }
 
 .quote.active{
 display:block;
 }
 
-.quote span{
-font-size:16px;
-opacity:0.6;
+.author{
+display:none;
+margin-top:20px;
+font-size:18px;
+color:#5c7c92;
 }
 
+.author.active{
+display:block;
+}
+
+
+/* ARROWS */
+
+.quote-btn{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:#2b6f95;
+border:none;
+color:white;
+font-size:22px;
+width:55px;
+height:55px;
+border-radius:50%;
+cursor:pointer;
+}
+
+.quote-btn.left{
+left:40px;
+}
+
+.quote-btn.right{
+right:40px;
+}
+
+.quote-btn:hover{
+background:#1e4f6a;
+}
 
 
 /* ARROWS */
