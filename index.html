@@ -12,10 +12,7 @@
 
 </head>
 
-
-
 <body>
-
 
 
 <!-- NAVBAR -->
@@ -34,7 +31,6 @@
 </nav>
 
 </header>
-
 
 
 
@@ -69,7 +65,6 @@ Letting AI handle the data while I handle the design and the talking.
 
 
 
-
 <!-- MY STORY -->
 
 <section id="story" class="story">
@@ -95,7 +90,6 @@ For me, Toastmasters is more than a club — it is a comfort place. KW's Silver 
 </div>
 
 
-
 <div class="story-image">
 
 <img src="profile.jpeg" alt="Rekha Tanmayee">
@@ -108,9 +102,7 @@ For me, Toastmasters is more than a club — it is a comfort place. KW's Silver 
 
 
 
-
-
-<!-- QUOTE SLIDER -->
+<!-- QUOTES -->
 
 <section class="quote-section">
 
@@ -142,7 +134,6 @@ For me, Toastmasters is more than a club — it is a comfort place. KW's Silver 
 
 
 
-
 <!-- FOOTER -->
 
 <footer style="text-align:center;padding:40px 20px;opacity:0.6">
@@ -152,6 +143,32 @@ For me, Toastmasters is more than a club — it is a comfort place. KW's Silver 
 </footer>
 
 
+
+<!-- QUOTE SCRIPT -->
+
+<script>
+
+let quoteIndex = 0;
+const quotes = document.querySelectorAll(".quote");
+
+function showQuote(){
+
+quotes.forEach(q => q.style.display = "none");
+
+quotes[quoteIndex].style.display = "block";
+
+quoteIndex++;
+
+if(quoteIndex >= quotes.length){
+quoteIndex = 0;
+}
+
+}
+
+setInterval(showQuote,6000);
+showQuote();
+
+</script>
 
 
 </body>
